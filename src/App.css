@@ -1,38 +1,112 @@
-.App {
+header {
   text-align: center;
+  padding: 2rem 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Sansita Swashed", cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  width: 90%;
+  margin: auto;
+  grid-gap: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.note {
+  background: #ececec;
+  padding: 1rem;
+  border-radius: 5px;
+  position: relative;
+  height: 60px;
+  box-shadow: 0 0 4px 2px #e2e2e2;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.delete_note {
+  color: white;
+  position: absolute;
+  top: -6px;
+  right: -5px;
+  background: red;
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.create_button {
+  text-align: center;
+  border: none;
+  color: white;
+  font-size: 3.4rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  background: black;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.create_button:hover {
+  box-shadow: 0 2px 2px lightgray;
+  opacity: 0.8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.create_button:active {
+  box-shadow: none;
+  opacity: 1;
+}
+
+.note_page {
+  width: 90%;
+  margin: auto;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  border: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.time {
+  margin-left: 10px;
+  font-size: 0.7rem;
+}
+
+.buttons {
+  margin-left: auto;
+}
+
+.buttons span {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+span.edit {
+  color: blue;
+}
+
+span.save {
+  color: green;
+}
+
+span.delete {
+  color: red;
+}
+
+.editor {
+  height: 80vh;
+}
+
+textarea {
+  width: 96%;
+  height: 100%;
+  overflow-y: scroll;
+  padding: 2%;
 }
